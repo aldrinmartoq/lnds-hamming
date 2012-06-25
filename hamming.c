@@ -8,12 +8,12 @@
  $ clang -DDEBUG hamming.c -o hamming
  
  Ejecución:
- $ time ./hamming 7 13 19 1000000
- 4474371506000938917
+ $ time ./hamming 7 13 19 1200
+ 8885630201238423997
  
- real 0m0.137s
- user 0m0.007s
- sys  0m0.007s
+ real	0m0.004s
+ user	0m0.001s
+ sys  0m0.002s
  
  DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
  Version 2, December 2004 
