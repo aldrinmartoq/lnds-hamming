@@ -54,12 +54,12 @@ NUM h(NUM p1, NUM p2, NUM p3, NUM n) {
     NUM i1 = 1, i2 = 1, i3 = 1;
     NUM *arr = calloc(sizeof(NUM), n);
 
-    printf_debug("%5s %10s | %10s %5s %10s %5s %10s %5s\n", "n", "h", "p1", "i1", "p2", "i2", "p3", "i3");
+    printf_debug("%5s %12s | %12s %5s %12s %5s %12s %5s\n", "n", "h", "p1", "i1", "p2", "i2", "p3", "i3");
     
     NUM z = 0;
     for (NUM i = 1; i <= n; i++) {
         arr[i] = z = min(c1, c2, c3);
-        printf_debug("%5llu %10lli | %10llu %5d %10llu %5d %10llu %5d\n", i, z, c1, i1, c2, i2, c3, i3);
+        printf_debug("%5llu %12lli | %12llu %5llu %12llu %5llu %12llu %5llu\n", i, z, c1, i1, c2, i2, c3, i3);
         while (c1 <= z) c1 = p1*arr[i1++];
         while (c2 <= z) c2 = p2*arr[i2++];
         while (c3 <= z) c3 = p3*arr[i3++];
