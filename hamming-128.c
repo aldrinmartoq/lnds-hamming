@@ -72,11 +72,11 @@ NUM h(NUM p1, NUM p2, NUM p3, NUM n) {
     NUM z = 0;
     for (NUM i = 1; i <= n; i++) {
         arr[i] = z = min(c1, c2, c3);
+        printf_debug("%5s %12s | %12s %5s %12s %5s %12s %5s\n", ss(i, si), ss(z, sz), ss(c1, sc1), ss(i1, si1), ss(c2, sc2), ss(i2, si2), ss(c3, sc3), ss(i3, si3));
         if (z < arr[i-1]) {
           printf("ERROR: límite 128bits alcanzado, último cálculo correcto es n: %s h: %s\n", ss(i-1, si), ss(arr[i-1], sz));
           abort();
         }
-        printf_debug("%5s %12s | %12s %5s %12s %5s %12s %5s\n", ss(i, si), ss(z, sz), ss(c1, sc1), ss(i1, si1), ss(c2, sc2), ss(i2, si2), ss(c3, sc3), ss(i3, si3));
         if (c1 <= z) c1 = p1*arr[i1++];
         if (c2 <= z) c2 = p2*arr[i2++];
         if (c3 <= z) c3 = p3*arr[i3++];
